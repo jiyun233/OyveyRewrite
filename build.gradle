@@ -67,6 +67,11 @@ dependencies {
     minecraft "net.minecraftforge:forge:$forgeVersion"
 
     dependLibs group: "com.googlecode.json-simple", name: "json-simple", version: "1.1.1"
+
+    annotationProcessor('org.spongepowered:mixin:0.8.2:processor') {
+        exclude module: 'gson'
+    }
+
     dependLibs('org.spongepowered:mixin:0.7.11-SNAPSHOT') {
         exclude module: 'launchwrapper'
         exclude module: 'guava'
